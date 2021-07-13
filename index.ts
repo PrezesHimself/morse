@@ -96,5 +96,5 @@ morseCode.subscribe(value => {
 
 morseCode.pipe(bufferWhen(() => endOfSign)).subscribe(value => {
   output.append(`<span></span>`);
-  letters.append(`<span>${MORSE_CODE[value.join('')]}</span>`);
+  letters.append(`<span>${MORSE_CODE[value.join('')] || '!'}</span>`);
 });
