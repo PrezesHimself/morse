@@ -3,14 +3,8 @@ import jQuery from 'jquery';
 import { fromEvent, zip, of, timer, merge } from 'rxjs';
 import {
   map,
-  pairwise,
   switchMap,
-  tap,
-  filter,
-  bufferTime,
-  debounce,
   debounceTime,
-  takeUntil,
   bufferWhen
 } from 'rxjs/operators';
 
