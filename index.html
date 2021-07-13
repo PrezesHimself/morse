@@ -2,6 +2,7 @@
   .output,
   .letters {
     display: flex;
+    min-height: 2em;
   }
 
   .output span,
@@ -11,10 +12,30 @@
     flex: 0 1 40px;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .letters span.ok {
+    color: green
+  }
+
+  .letters span.not-ok {
+    color: red
+  }
+
+  .tips {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tip {
+    flex: 0 0 20%
   }
 </style>
 
 <div class="app">
+  <div class="task"></div>
   <div class="output"></div>
   <div class="letters"></div>
+  <div class="tips"></div>
 </div>
