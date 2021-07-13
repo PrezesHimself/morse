@@ -21,7 +21,7 @@ const letters = jQuery('.letters');
 
 const SHOT = 300;
 const LONG = 1000;
-const TIME_BETWEEN_SIGNS = 3000;
+const TIME_BETWEEN_SIGNS = 2000;
 
 const MORSE_CODE = {
   '.-': 'a',
@@ -83,7 +83,7 @@ const toMorseCode = () =>
 
 const morseCode = toMorseCode();
 
-const endOfSign = morseCode.pipe(debounceTime(2000));
+const endOfSign = morseCode.pipe(debounceTime(TIME_BETWEEN_SIGNS));
 
 morseCode.subscribe(value => {
   var span = output.find('span:last-child');
